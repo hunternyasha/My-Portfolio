@@ -1,0 +1,693 @@
+/********** Reset **********/
+body {
+  background-color: rgb(36, 40, 48);
+}
+
+/********** End **********/
+/********** Fonts **********/
+@font-face {
+  font-family: "IBMPlexMono-Regular";
+  src: url("/Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf");
+}
+@font-face {
+  font-family: "IBMPlexMono-Light";
+  src: url(/Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf);
+}
+/********** End **********/
+/********** Nav **********/
+#navbarToggler {
+  background-color: rgb(36, 40, 48);
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.navbar-nav li {
+  margin: 0 90px 0 0;
+  font-size: 20px;
+}
+.navbar-nav li a {
+  color: white;
+}
+.navbar-nav li a:hover {
+  color: rgb(255, 223, 15);
+}
+
+.navbar {
+  background-color: rgb(36, 40, 48);
+  box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.8);
+  padding: 10px 0 0 0;
+}
+.navbar button {
+  width: 60px;
+}
+.navbar .navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 1px black;
+}
+.navbar ul {
+  margin: 0 10% 0 0;
+}
+.navbar ul img {
+  font-size: 30px;
+}
+
+/********** End **********/
+/********** Hero Section **********/
+.hero .container {
+  margin: 0 0 0 13%;
+}
+.hero h1 {
+  font-family: "IBMPlexMono-Light";
+  font-size: 30px;
+  color: white;
+  margin: 14% 0 5% 0;
+}
+.hero h1 span {
+  color: rgb(255, 223, 15);
+}
+.hero p {
+  font-family: "IBMPlexMono-Regular";
+  color: white;
+  font-size: 20px;
+  width: 50%;
+  margin: 0 0 5% 0;
+  line-height: 1.5;
+}
+.hero p i {
+  color: rgb(255, 223, 15);
+}
+.hero button {
+  color: white;
+  border: 1px solid white;
+  padding: 1% 2% 1% 2%;
+  font-family: "IBMPlexMono-Light";
+}
+.hero button:hover {
+  color: rgb(255, 223, 15);
+}
+.hero button:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 2px black;
+}
+
+.Line .breaker {
+  color: white;
+  display: flex;
+  border: 1px solid white;
+  margin: 5% 195px 0 195px;
+  border-radius: 6px;
+}
+
+/********** End **********/
+/******* About ********/
+.About {
+  padding-bottom: 40%;
+}
+.About h4 {
+  font-family: "IBMPlexMono-Bold";
+  text-align: center;
+  color: rgb(255, 223, 15);
+  font-size: 30px;
+  margin-top: 6%;
+}
+.About h2 {
+  margin: 18% 0% 0% 4%;
+  font-family: "IBMPlexMono-Bold";
+  line-height: 1.5;
+  font-size: 30px;
+}
+.About h2 span {
+  color: rgb(255, 223, 15);
+}
+
+/******* About profile pic & styles ********/
+.person {
+  text-align: -webkit-center;
+}
+
+.container-outer {
+  border-radius: 50%;
+  height: 312px;
+  -webkit-tap-highlight-color: transparent;
+  transform: scale(0.78);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 400px;
+}
+
+.container-outer:after {
+  height: 10px;
+  position: absolute;
+  top: 390px;
+  width: 100%;
+}
+
+.container-outer:hover {
+  transform: scale(0.74);
+}
+
+.container-inner {
+  -webkit-clip-path: path("M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z");
+          clip-path: path("M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z");
+  position: relative;
+  transform-origin: 50%;
+  top: -200px;
+}
+
+.circle {
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  height: 380px;
+  left: 10px;
+  pointer-events: none;
+  position: absolute;
+  top: 210px;
+  width: 380px;
+}
+
+.img {
+  pointer-events: none;
+  position: relative;
+  transform: translateY(60px) scale(1.18);
+  transform-origin: 50% bottom;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container-outer:hover .img {
+  transform: translateY(0) scale(1.2);
+}
+
+.img2 {
+  left: -42vh;
+  top: 101px;
+  width: 198%;
+}
+
+/******* end ********/
+/******** SecondInnerAbout *********/
+.FirstInnerAbout {
+  margin: 8.01% 0 0 0;
+  text-align: center;
+}
+
+.SecInnerAbout {
+  margin: 10% 0 0 0;
+  /******** Social icons & styles *********/
+}
+.SecInnerAbout .ndInnerAbout {
+  width: 77%;
+}
+.SecInnerAbout .ndInnerAbout p {
+  font-family: "IBMPlexMono-Regular";
+  font-size: 20px;
+  line-height: 1.5;
+  color: white;
+}
+.SecInnerAbout .wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+.SecInnerAbout .wrapper .icon {
+  position: relative;
+  background: rgb(36, 40, 48);
+  border-radius: 50%;
+  padding: 35px;
+  margin: 50px 58px 0px -32px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.SecInnerAbout .wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.SecInnerAbout .wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.SecInnerAbout .wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.SecInnerAbout .wrapper .icon:hover span,
+.SecInnerAbout .wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+.SecInnerAbout .wrapper .facebook:hover,
+.SecInnerAbout .wrapper .facebook:hover .tooltip,
+.SecInnerAbout .wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+.SecInnerAbout .wrapper .twitter:hover,
+.SecInnerAbout .wrapper .twitter:hover .tooltip,
+.SecInnerAbout .wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+.SecInnerAbout .wrapper .instagram:hover,
+.SecInnerAbout .wrapper .instagram:hover .tooltip,
+.SecInnerAbout .wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+.SecInnerAbout .wrapper .github:hover,
+.SecInnerAbout .wrapper .github:hover .tooltip,
+.SecInnerAbout .wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+.SecInnerAbout .icon:hover {
+  box-shadow: 0 0 5px rgb(255, 223, 15);
+}
+
+.secondLine .secondBreaker {
+  display: flex;
+  border: 1px solid white;
+  margin: -30% 450px 0 450px;
+  border-radius: 6px;
+}
+
+/******* end ********/
+/******* Skills & cards with hover txt ********/
+h4 {
+  font-family: "IBMPlexMono-Bold";
+  text-align: center;
+  color: rgb(255, 223, 15);
+  font-size: 30px;
+  margin-top: 6%;
+}
+
+h5 {
+  color: white;
+  text-align: center;
+  font-family: "IBMPlexMono-Light";
+  font-size: 20px;
+  margin: 5% 0 5% 0;
+}
+h5 span {
+  color: rgb(255, 223, 15);
+}
+
+.card-padd {
+  margin: 0 0 3% 7%;
+  padding: 0 10% 0 10%;
+}
+
+.secondCard-marg {
+  margin: 0 0 3% 35.2%;
+}
+
+.cards .card,
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(36, 40, 48);
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: 0.3s;
+}
+
+.cards .card h6,
+.card h6 {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  text-align: center;
+  background: none;
+  color: white;
+  transform: translateY(100%);
+  transition: 0.3s;
+  font-family: "IBMPlexMono-Light";
+  margin-top: 78px;
+}
+
+.cards .card:hover,
+.card:hover,
+.cards .card:focus,
+.card:focus,
+.cards .card:active,
+.card:active {
+  box-shadow: 0 0 5px rgb(255, 223, 15);
+  transform: translateY(-3px) scale(1.05) rotateX(15deg);
+}
+
+.cards .card:hover h6,
+.card:hover h6,
+.cards .card:focus h6,
+.card:focus h6,
+.card:active h6,
+.card:active h6 {
+  transform: none;
+}
+
+.cards .card:hover:after,
+.card:hover:after,
+.cards .card:focus:after,
+.card:focus:after,
+.cards .card:active:after,
+.card:active:after {
+  transform: rotate(25deg);
+  top: -40%;
+  opacity: 0.15;
+}
+
+.thirdLine .thirdBreaker {
+  display: flex;
+  border: 1px solid rgb(255, 223, 15);
+  border-radius: 6px;
+  margin: 0 500px 5% 500px;
+}
+
+.fourthLine .fourthBreaker {
+  color: white;
+  display: flex;
+  border: 1px solid white;
+  margin: 5% 195px 0 195px;
+  border-radius: 6px;
+}
+
+/******* end ********/
+/******* WORK ********/
+.Work {
+  text-align: center;
+}
+.Work button {
+  color: white;
+  border: 1px solid white;
+  padding: 1% 2% 1% 2%;
+  font-family: "IBMPlexMono-Light";
+}
+.Work button:hover {
+  color: rgb(255, 223, 15);
+}
+.Work button:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 2px black;
+}
+
+.fifthLine .fifthBreaker {
+  display: flex;
+  border: 1px solid white;
+  margin: 5% 450px 5% 450px;
+  border-radius: 6px;
+}
+
+/******* end ********/
+/******* Contact Me ********/
+footer .container {
+  margin: 5% 0 0 11%;
+}
+footer .innerContact {
+  width: 30%;
+  margin: 0 0 0 10%;
+}
+footer .innerContact .innerContactInput .form-floating input {
+  background-color: rgb(36, 40, 48);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  border: none !important;
+  color: white !important;
+}
+footer .innerContact .innerContactInput .form-floating label {
+  color: rgb(255, 223, 15);
+  font-family: "IBMPlexMono-Light";
+  font-size: 13px;
+}
+footer .innerContact .innerContactInput input:focus {
+  box-shadow: 0 0 5px rgb(255, 223, 15);
+}
+footer .innerContact button {
+  color: white;
+  border: 1px solid rgb(36, 40, 48);
+  padding: 1% 15% 1% 15%;
+  font-family: "IBMPlexMono-Light";
+  font-size: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+footer .innerContact button:active {
+  box-shadow: 0 0 5px rgb(255, 223, 15);
+}
+footer .innerContact .innerContactTextarea textarea {
+  background-color: rgb(36, 40, 48);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.8);
+  border: none;
+  color: white;
+  height: 40vh;
+}
+footer .innerContact .innerContactTextarea textarea:focus {
+  box-shadow: 0 0 5px rgb(255, 223, 15);
+}
+footer .innerContact .innerContactTextarea label {
+  color: rgb(255, 223, 15);
+  font-family: "IBMPlexMono-Light";
+  font-size: 13px;
+}
+footer .secondInnerContact {
+  margin: 7% 0 0 5%;
+}
+footer .secondInnerContact h3 {
+  margin: 0 0 5% 10%;
+  font-family: "IBMPlexMono-Bold";
+  font-size: 40px;
+  color: white;
+}
+footer .secondInnerContact h3 .textColour {
+  color: rgb(255, 223, 15);
+}
+footer .contactParagraph {
+  width: 58%;
+}
+footer .contactParagraph p {
+  line-height: 1.5;
+  font-family: "IBMPlexMono-Light";
+  color: white;
+  font-size: 20px;
+}
+footer .contactParagraph p span {
+  color: rgb(255, 223, 15);
+}
+footer .socialIcons .wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+footer .socialIcons .wrapper .icon {
+  position: relative;
+  background: rgb(36, 40, 48);
+  border-radius: 50%;
+  padding: 35px;
+  margin: 50px 58px 0px -32px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+footer .socialIcons .wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+footer .socialIcons .wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+footer .socialIcons .wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+footer .socialIcons .wrapper .icon:hover span,
+footer .socialIcons .wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+footer .socialIcons .wrapper .facebook:hover,
+footer .socialIcons .wrapper .facebook:hover .tooltip,
+footer .socialIcons .wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+footer .socialIcons .wrapper .twitter:hover,
+footer .socialIcons .wrapper .twitter:hover .tooltip,
+footer .socialIcons .wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+footer .socialIcons .wrapper .instagram:hover,
+footer .socialIcons .wrapper .instagram:hover .tooltip,
+footer .socialIcons .wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+footer .socialIcons .wrapper .github:hover,
+footer .socialIcons .wrapper .github:hover .tooltip,
+footer .socialIcons .wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+footer .socialIcons .icon:hover {
+  box-shadow: 0 1px 6px rgb(255, 223, 15);
+}
+footer .contactParagraph {
+  width: 58%;
+}
+footer .contactParagraph p {
+  line-height: 1.5;
+  font-family: "IBMPlexMono-Light";
+  color: white;
+  font-size: 20px;
+}
+footer .contactParagraph p span {
+  color: rgb(255, 223, 15);
+}
+footer .socialIcons .wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+footer .socialIcons .wrapper .icon {
+  position: relative;
+  background: rgb(36, 40, 48);
+  border-radius: 50%;
+  padding: 35px;
+  margin: 50px 58px 0px -32px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+footer .socialIcons .wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+footer .socialIcons .wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+footer .socialIcons .wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+footer .socialIcons .wrapper .icon:hover span,
+footer .socialIcons .wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+footer .socialIcons .wrapper .facebook:hover,
+footer .socialIcons .wrapper .facebook:hover .tooltip,
+footer .socialIcons .wrapper .facebook:hover .tooltip::before {
+  background: #1877F2;
+  color: #ffffff;
+}
+footer .socialIcons .wrapper .twitter:hover,
+footer .socialIcons .wrapper .twitter:hover .tooltip,
+footer .socialIcons .wrapper .twitter:hover .tooltip::before {
+  background: #1DA1F2;
+  color: #ffffff;
+}
+footer .socialIcons .wrapper .instagram:hover,
+footer .socialIcons .wrapper .instagram:hover .tooltip,
+footer .socialIcons .wrapper .instagram:hover .tooltip::before {
+  background: #E4405F;
+  color: #ffffff;
+}
+footer .socialIcons .wrapper .github:hover,
+footer .socialIcons .wrapper .github:hover .tooltip,
+footer .socialIcons .wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+footer .socialIcons .icon:hover {
+  box-shadow: 0 1px 6px rgb(255, 223, 15);
+}
+footer .copyright {
+  color: white;
+  font-family: "IBMPlexMono-Regular";
+  text-align: center;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.8);
+  margin: 5% 0 -5% 0;
+}
+footer .copyright p {
+  line-height: 1.5;
+  font-family: "IBMPlexMono-Light";
+}
+footer .copyright p span {
+  color: rgb(255, 223, 15);
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,775 @@
+/********** Reset **********/ 
+@include reset-css;
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main{
+  display: block;
+}
+
+body{
+  line-height: 1;
+}
+
+ol, ul{
+  list-style: none;
+}
+
+blockquote, q{
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after{
+  content: '';
+  content: none;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input{
+  border-radius: 0;
+}
+body{
+    background-color: rgba(36, 40, 48, 1);
+}
+
+/********** End **********/ 
+
+/********** Fonts **********/ 
+@font-face {
+    font-family: "IBMPlexMono-Regular";
+    src: url("/Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf");
+}
+@font-face {
+    font-family: "IBMPlexMono-Light";
+    src: url(/Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf);
+}
+/********** End **********/ 
+
+/********** Nav **********/ 
+#navbarToggler{
+    background-color: rgba(36, 40, 48, 1);
+}
+.navbar-nav{display: flex; flex-direction: row; justify-content: center;
+    li{margin: 0 90px 0 0; font-size: 20px;
+        a{color: white;}
+        a:hover{color:rgba(255, 223, 15, 1); }
+    }
+}
+.navbar{
+    background-color: rgba(36, 40, 48, 1); 
+    box-shadow: 4px 4px 5px 0 rgb(0 0 0 / 80%); 
+    padding: 10px 0 0 0;
+    button{width: 60px;}
+    .navbar-toggler:focus {
+        text-decoration: none;
+        outline: 0;
+        box-shadow: 0 0 0 1px black ;
+    }
+    ul{margin: 0 10% 0 0;
+        img{font-size: 30px;}
+    }
+}
+/********** End **********/ 
+
+/********** Hero Section **********/ 
+.hero{
+    
+    .container{
+        margin: 0 0 0 13%;
+    }
+    h1{
+        font-family: "IBMPlexMono-Light";
+        font-size: 30px;
+        color: white;
+        margin: 14% 0 5% 0;
+        span{color: rgba(255, 223, 15, 1);}
+    }
+    p{
+        font-family: "IBMPlexMono-Regular";
+        color: white;
+        font-size: 20px;
+        width: 50%;
+        margin: 0 0 5% 0;
+        line-height: 1.5;
+        i{color: rgba(255, 223, 15, 1);}
+    }
+    button{
+        color: white;
+        border: 1px solid white;
+        padding: 1% 2% 1% 2%;
+        font-family: "IBMPlexMono-Light";
+    }
+     
+    button:hover{color: rgba(255, 223, 15, 1);}
+    button:focus{
+        text-decoration: none;
+        outline: 0;
+        box-shadow: 0 0 0 2px black ;
+    }
+
+}
+.Line{
+    .breaker{
+        color: white;
+        display: flex;
+        border: 1px solid white;
+        margin: 5% 195px 0 195px ;
+        border-radius:6px; 
+    }
+}
+/********** End **********/ 
+/******* About ********/ 
+.About{
+    padding-bottom: 40%;
+    h4{
+      font-family: "IBMPlexMono-Bold";
+        text-align: center;
+        color: rgba(255, 223, 15, 1);
+        font-size: 30px;
+        margin-top: 6%;
+    }
+    h2{
+        margin: 18% 0% 0% 4%;
+        font-family: "IBMPlexMono-Bold";
+        line-height: 1.5;
+        font-size: 30px;
+        span{color: rgba(255, 223, 15, 1);}
+    }
+
+}
+
+
+/******* About profile pic & styles ********/
+.person{
+    text-align: -webkit-center;
+}
+  .container-outer {
+    border-radius: 50%;
+    height: 312px;
+    -webkit-tap-highlight-color: transparent;
+    transform: scale(0.78);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 400px;
+  }
+  .container-outer:after {
+    height: 10px;
+    position: absolute;
+    top: 390px;
+    width: 100%;
+  }
+  .container-outer:hover {
+    transform: scale(0.74);
+  }
+  .container-inner {
+    clip-path: path(
+      "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+    );
+    position: relative;
+    transform-origin: 50%;
+    top: -200px;
+  }
+  .circle {
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 80%);
+    cursor: pointer;
+    height: 380px;
+    left: 10px;
+    pointer-events: none;
+    position: absolute;
+    top: 210px;
+    width: 380px;
+  }
+  .img {
+    pointer-events: none;
+    position: relative;
+    transform: translateY(60px) scale(1.18);
+    transform-origin: 50% bottom;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .container-outer:hover .img {
+    transform: translateY(0) scale(1.2);
+  }
+
+  .img2 {
+    left: -42vh;
+    top: 101px;
+    width: 198%;
+}
+/******* end ********/
+
+
+/******** SecondInnerAbout *********/ 
+.FirstInnerAbout{
+    margin: 8.01% 0 0 0;
+    text-align: center;
+}
+.SecInnerAbout{
+    margin: 10% 0 0 0;
+    .ndInnerAbout{
+        width: 77%;
+        p{
+            font-family: "IBMPlexMono-Regular";
+            font-size: 20px;
+            line-height: 1.5;
+            color: white;
+        }
+    }
+/******** Social icons & styles *********/ 
+
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: rgba(36, 40, 48, 1);
+    border-radius: 50%;
+    padding: 35px;
+    margin: 50px 58px 0px -32px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 5px rgb(0 0 0 / 80%);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+  }
+  
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #ffffff;
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #E4405F;
+    color: #ffffff;
+  }
+  
+  .wrapper .github:hover,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: #ffffff;
+  }
+  
+  .icon:hover{box-shadow: 0 0 5px rgba(255, 223, 15, 1);}
+}
+.secondLine{
+  .secondBreaker{
+    display: flex;
+    border: 1px solid white;
+    margin: -30% 450px 0 450px;
+    border-radius: 6px;
+  }
+}
+/******* end ********/
+
+/******* Skills & cards with hover txt ********/
+h4{
+  font-family: "IBMPlexMono-Bold";
+  text-align: center;
+  color: rgba(255, 223, 15, 1);
+  font-size: 30px;
+  margin-top: 6%;
+}
+h5{
+  color: white;
+  text-align: center;
+  font-family: "IBMPlexMono-Light";
+  font-size: 20px;
+  margin: 5% 0 5% 0;
+  span{
+    color: rgba(255, 223, 15, 1);
+  }
+
+}
+.card-padd{
+  margin: 0 0 3% 7%;
+  padding: 0 10% 0 10%;
+  
+}
+.secondCard-marg{
+  margin: 0 0 3% 35.2%;
+}
+
+.cards .card,
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(36, 40, 48, 1);
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0,0,0,0.8);
+  transform-origin: center top;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  transition: 0.3s;
+}
+.cards .card h6,
+.card h6 {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  text-align: center;
+  background: none;
+  color: white;
+  transform: translateY(100%);
+  transition: 0.3s;
+  font-family: "IBMPlexMono-Light";
+  margin-top: 78px;
+}
+
+.cards .card:hover,
+.card:hover,
+.cards .card:focus,
+.card:focus,
+.cards .card:active,
+.card:active {
+  box-shadow: 0 0 5px rgba(255, 223, 15, 1);
+  transform: translateY(-3px) scale(1.05) rotateX(15deg);
+}
+.cards .card:hover h6,
+.card:hover h6,
+.cards .card:focus h6,
+.card:focus h6,
+.card:active h6,
+.card:active h6 {
+  transform: none;
+}
+.cards .card:hover:after,
+.card:hover:after,
+.cards .card:focus:after,
+.card:focus:after,
+.cards .card:active:after,
+.card:active:after {
+  transform: rotate(25deg);
+  top: -40%;
+  opacity: 0.15;
+}
+
+.thirdLine{
+  .thirdBreaker{
+    display: flex;
+    
+    border: 1px solid rgba(255, 223, 15, 1);
+    border-radius: 6px;
+    margin: 0 500px 5% 500px ;
+  }
+}
+
+
+.fourthLine{
+  .fourthBreaker{
+    color: white;
+    display: flex;
+    border: 1px solid white;
+    margin: 5% 195px 0 195px ;
+    border-radius:6px; 
+  }
+}
+/******* end ********/
+
+/******* WORK ********/
+.Work{
+  text-align: center;
+  button{
+    color: white;
+    border: 1px solid white;
+    padding: 1% 2% 1% 2%;
+    font-family: "IBMPlexMono-Light";
+}
+ 
+button:hover{color: rgba(255, 223, 15, 1);}
+button:focus{
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 2px black ;
+}
+}
+
+.fifthLine{
+  .fifthBreaker{
+    display: flex;
+    border: 1px solid white;
+    margin: 5% 450px 5% 450px;
+    border-radius: 6px; 
+  }
+}
+/******* end ********/
+
+/******* Contact Me ********/
+
+footer{
+.container{
+    margin: 5% 0 0 11%;
+  }  
+  .innerContact{
+    width: 30%;
+    margin: 0 0 0 10%;
+    .innerContactInput{
+      .form-floating{
+        input{
+          background-color: rgba(36, 40, 48, 1);
+          box-shadow: 0 0 5px rgba(0,0,0,0.8);
+          border: none !important;
+          color: white !important;;
+        }
+        label{
+          color: rgba(255, 223, 15, 1);
+          font-family: "IBMPlexMono-Light";
+          font-size: 13px;
+        }
+      }
+      input:focus{
+        box-shadow: 0 0 5px rgba(255, 223, 15, 1);
+      }
+    }
+    button{
+      color: white;
+      border: 1px solid rgba(36, 40, 48, 1);
+      padding: 1% 15% 1% 15%;
+      font-family: "IBMPlexMono-Light";
+      font-size: 15px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.8);
+  }
+  button:active{
+    box-shadow: 0 0 5px rgba(255, 223, 15, 1);
+  }
+    
+
+    .innerContactTextarea{
+      textarea{
+        background-color: rgba(36, 40, 48, 1);
+        box-shadow: 0 0px 5px rgba(0,0,0,0.8);
+        border: none ;
+        color: white;
+        height: 40vh;
+      }
+      textarea:focus{
+        box-shadow: 0 0 5px rgba(255, 223, 15, 1);
+      }
+      label{
+        color: rgba(255, 223, 15, 1);
+        font-family: "IBMPlexMono-Light";
+        font-size: 13px;
+      }
+    }
+  }
+
+  .secondInnerContact{
+    margin: 7% 0 0 5%;
+    h3{
+      margin: 0 0 5% 10%;
+      font-family: "IBMPlexMono-Bold";
+      font-size: 40px;
+      color: white;
+      .textColour{
+        color: rgba(255, 223, 15, 1);
+      }
+
+    } 
+}
+.contactParagraph{
+  width: 58%;
+  p{
+    line-height: 1.5;
+    font-family: "IBMPlexMono-Light";
+    color: white;
+    font-size: 20px;
+    span{
+      color: rgba(255, 223, 15, 1);
+    }
+  }
+}
+.socialIcons{
+  .wrapper {
+    display: inline-flex;
+    list-style: none;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: rgba(36, 40, 48, 1);
+    border-radius: 50%;
+    padding: 35px;
+    margin: 50px 58px 0px -32px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 1px 6px rgb(0 0 0 / 80%);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+  }
+  
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #ffffff;
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #E4405F;
+    color: #ffffff;
+  }
+  
+  .wrapper .github:hover,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: #ffffff;
+  }
+  
+  .icon:hover{box-shadow: 0 1px 6px rgba(255, 223, 15, 1);}
+
+}
+.contactParagraph{
+  width: 58%;
+  p{
+    line-height: 1.5;
+    font-family: "IBMPlexMono-Light";
+    color: white;
+    font-size: 20px;
+    span{
+      color: rgba(255, 223, 15, 1);
+    }
+  }
+}
+.socialIcons{
+  .wrapper {
+    display: inline-flex;
+    list-style: none;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: rgba(36, 40, 48, 1);
+    border-radius: 50%;
+    padding: 35px;
+    margin: 50px 58px 0px -32px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 1px 6px rgb(0 0 0 / 80%);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+  }
+  
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #ffffff;
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #E4405F;
+    color: #ffffff;
+  }
+  
+  .wrapper .github:hover,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: #ffffff;
+  }
+  
+  .icon:hover{box-shadow: 0 1px 6px rgba(255, 223, 15, 1);}
+
+}
+.copyright{
+  color: white;
+  font-family: "IBMPlexMono-Regular";
+  text-align: center;
+  box-shadow: 0 -5px 5px rgb(0 0 0 / 80%);
+  margin: 5% 0 -5% 0;
+  p{
+    line-height: 1.5;
+    font-family: "IBMPlexMono-Light";
+    span{
+      color: rgba(255, 223, 15, 1);
+    }
+
+  }
+  
+}
+}
+
+  
+  
+
+
+
