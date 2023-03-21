@@ -1,8 +1,6 @@
 /********** Reset **********/
-body {
-  background-color: rgb(36, 40, 48);
-}
-
+@import url("./_reboot.scss");
+@import url("./_clearfix.scss");
 /********** End **********/
 /********** Fonts **********/
 @font-face {
@@ -14,6 +12,57 @@ body {
   src: url(/Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf);
 }
 /********** End **********/
+body {
+  background-size: 6px 6px !important;
+  background-image: linear-gradient(-45deg, #101010 46%, #060606 49%, #060606 51%, #101010 55%);
+  overflow-x: hidden;
+}
+
+/********** Custom Cursor **********/
+body.out .pointer {
+  width: 0;
+  height: 0;
+}
+
+.pointer.href {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  box-shadow: 0 0 30px #FFDF0F;
+}
+
+.pointer.social {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  box-shadow: 0 0 30px #000;
+}
+
+/********** End **********/
+.code-container {
+  perspective: 2000px;
+}
+
+.code {
+  position: relative;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transform: rotateX(30deg);
+  transition: transform 0.5s;
+}
+
+.tag {
+  color: rgb(255, 223, 15);
+}
+
+.indent {
+  margin-left: 20px;
+}
+
+.code:hover {
+  transform: rotateX(0deg);
+}
+
 /********** Nav **********/
 #navbarToggler {
   background-color: rgb(36, 40, 48);
@@ -36,29 +85,36 @@ body {
 }
 
 .navbar {
-  background-color: rgb(36, 40, 48);
+  background: rgb(36, 40, 48);
   box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.8);
-  padding: 10px 0 0 0;
+  padding: 10px 0 0;
 }
 .navbar button {
   width: 60px;
 }
-.navbar .navbar-toggler:focus {
+
+.navbar-toggler:focus {
   text-decoration: none;
   outline: 0;
   box-shadow: 0 0 0 1px black;
 }
-.navbar ul {
-  margin: 0 10% 0 0;
+
+ul {
+  margin-right: 10%;
 }
-.navbar ul img {
+
+img {
   font-size: 30px;
+}
+
+img {
+  color: rgba(0, 0, 0, 0.8);
 }
 
 /********** End **********/
 /********** Hero Section **********/
 .hero .container {
-  margin: 0 0 0 13%;
+  margin-left: 13%;
 }
 .hero h1 {
   font-family: "IBMPlexMono-Light";
@@ -73,8 +129,8 @@ body {
   font-family: "IBMPlexMono-Regular";
   color: white;
   font-size: 20px;
-  width: 50%;
-  margin: 0 0 5% 0;
+  width: 80%;
+  margin-bottom: 5%;
   line-height: 1.5;
 }
 .hero p i {
@@ -83,13 +139,11 @@ body {
 .hero button {
   color: white;
   border: 1px solid white;
-  padding: 1% 2% 1% 2%;
+  padding: 1% 2%;
   font-family: "IBMPlexMono-Light";
 }
-.hero button:hover {
+.hero button:hover, .hero button:focus {
   color: rgb(255, 223, 15);
-}
-.hero button:focus {
   text-decoration: none;
   outline: 0;
   box-shadow: 0 0 0 2px black;
@@ -127,23 +181,23 @@ body {
 
 /******* About profile pic & styles ********/
 .person {
-  text-align: -webkit-center;
+  text-align: center;
 }
 
-.container-outer {
+.container-outer,
+.container-outer:after {
   border-radius: 50%;
   height: 312px;
-  -webkit-tap-highlight-color: transparent;
+  width: 400px;
   transform: scale(0.78);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 400px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .container-outer:after {
   height: 10px;
   position: absolute;
   top: 390px;
-  width: 100%;
 }
 
 .container-outer:hover {
@@ -154,8 +208,21 @@ body {
   -webkit-clip-path: path("M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z");
           clip-path: path("M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z");
   position: relative;
-  transform-origin: 50%;
   top: -200px;
+  transform-origin: 50%;
+}
+
+.img,
+.container-outer:hover .img {
+  pointer-events: none;
+  position: relative;
+  transform-origin: bottom center;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(60px) scale(1.18);
+}
+
+.container-outer:hover .img {
+  transform: translateY(0) scale(1.2);
 }
 
 .circle {
@@ -168,18 +235,6 @@ body {
   position: absolute;
   top: 210px;
   width: 380px;
-}
-
-.img {
-  pointer-events: none;
-  position: relative;
-  transform: translateY(60px) scale(1.18);
-  transform-origin: 50% bottom;
-  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.container-outer:hover .img {
-  transform: translateY(0) scale(1.2);
 }
 
 .img2 {
@@ -275,10 +330,10 @@ body {
   background: #1DA1F2;
   color: #ffffff;
 }
-.SecInnerAbout .wrapper .instagram:hover,
-.SecInnerAbout .wrapper .instagram:hover .tooltip,
-.SecInnerAbout .wrapper .instagram:hover .tooltip::before {
-  background: #E4405F;
+.SecInnerAbout .wrapper .linkedin:hover,
+.SecInnerAbout .wrapper .linkedin:hover .tooltip,
+.SecInnerAbout .wrapper .linkedin:hover .tooltip::before {
+  background: #0077B5;
   color: #ffffff;
 }
 .SecInnerAbout .wrapper .github:hover,
@@ -406,19 +461,86 @@ h5 span {
 .Work {
   text-align: center;
 }
-.Work button {
+.Work .innerWork {
+  padding: 0 10%;
+}
+.Work .innerWork .portfolio .filters {
+  display: flex;
+  justify-content: flex-end;
+}
+.Work .innerWork .portfolio .filters a {
+  display: block;
   color: white;
-  border: 1px solid white;
-  padding: 1% 2% 1% 2%;
-  font-family: "IBMPlexMono-Light";
-}
-.Work button:hover {
-  color: rgb(255, 223, 15);
-}
-.Work button:focus {
+  font-size: 20px;
+  font-weight: 500;
+  opacity: 0.7;
+  padding: 4px 10px;
   text-decoration: none;
-  outline: 0;
-  box-shadow: 0 0 0 2px black;
+  font-family: "IBMPlexMono-Light";
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+}
+.Work .innerWork .portfolio .filters a:first-child {
+  margin-left: 0;
+}
+.Work .innerWork .portfolio .filters a:last-child {
+  margin-right: 0;
+}
+.Work .innerWork .portfolio .filters a:hover {
+  opacity: 0.9;
+}
+.Work .innerWork .portfolio .filters a.active {
+  opacity: 1;
+  background: r;
+  color: #fff;
+}
+.Work .innerWork .portfolio .portfolio-container .portfolio-item {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 4px -4px;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.Work .innerWork .portfolio .portfolio-container .portfolio-item img {
+  width: 95%;
+}
+.Work .innerWork .portfolio .portfolio-container .portfolio-item p a {
+  color: #fff;
+  text-decoration: none;
+}
+.Work .innerWork .portfolio .portfolio-container .portfolio-item .content-holder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.Work .innerWork .portfolio .portfolio-container .portfolio-item .content-holder .title {
+  font-size: 22px;
+  font-weight: 600;
+}
+.Work .innerWork .portfolio .portfolio-container .portfolio-item .content-holder .subtitle {
+  font-weight: 500;
+  opacity: 1;
+  color: #fff;
+}
+.Work .innerWork .portfolio .portfolio-container .portfolio-item:hover .content-holder {
+  opacity: 1;
+  visibility: visible;
 }
 
 .fifthLine .fifthBreaker {
@@ -568,9 +690,9 @@ footer .socialIcons .wrapper .twitter:hover .tooltip::before {
   background: #1DA1F2;
   color: #ffffff;
 }
-footer .socialIcons .wrapper .instagram:hover,
-footer .socialIcons .wrapper .instagram:hover .tooltip,
-footer .socialIcons .wrapper .instagram:hover .tooltip::before {
+footer .socialIcons .wrapper .linkedin:hover,
+footer .socialIcons .wrapper .linkedin:hover .tooltip,
+footer .socialIcons .wrapper .linkedin:hover .tooltip::before {
   background: #E4405F;
   color: #ffffff;
 }
@@ -662,10 +784,10 @@ footer .socialIcons .wrapper .twitter:hover .tooltip::before {
   background: #1DA1F2;
   color: #ffffff;
 }
-footer .socialIcons .wrapper .instagram:hover,
-footer .socialIcons .wrapper .instagram:hover .tooltip,
-footer .socialIcons .wrapper .instagram:hover .tooltip::before {
-  background: #E4405F;
+footer .socialIcons .wrapper .linkedin:hover,
+footer .socialIcons .wrapper .linkedin:hover .tooltip,
+footer .socialIcons .wrapper .linkedin:hover .tooltip::before {
+  background: #0077B5;
   color: #ffffff;
 }
 footer .socialIcons .wrapper .github:hover,

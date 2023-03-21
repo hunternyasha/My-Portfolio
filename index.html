@@ -5,58 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="Scripts/Bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="Scripts/Bootstrap/owl.carousel.min.css">
+    <link rel="stylesheet" href="Scripts/Bootstrap/owl.theme.default.min.css">
     <link rel="stylesheet" href="Css/styles.css">
     <title>My Portfolio</title>
 </head>
 
 <body>
 
+        <!-- Custom Cursor -->
+        <div class="pointer" id="pointer"></div>
+        <!-- Custom Cursor end -->
+
     <!-- Nav Bar -->
 
-        <div class="collapse " id="navbarToggler">
-            <div class="p-4">
+<nav class="navbar sticky-top">
+  <div class="container-fluid">
 
-                <ul class="navbar-nav">
+    <!-- Hamburger menu button -->
+    <button class="navbar-toggler poiner-black" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class=""><img src="Assets/Images/Hum menu.png" alt="ham menu" class="img-fluid"></span>
+    </button>
 
-                    <li class="nav-item ">
-                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                    </li>
+    <!-- Brand/logo image (optional) -->
+    <!-- <a class="navbar-brand" href="#"><img src="Assets/Images/logo-no-background.png" alt=""></a> -->
 
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">ABOUT ME</a>
-                    </li>
+    <!-- Collapsible navigation menu -->
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active pointer-href" aria-current="page" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pointer-href" href="#">ABOUT ME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pointer-href" href="#">SKILLS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pointer-href" href="#">WORK</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link pointer-href" href="#">CONTACT</a>
+        </li>
+      </ul>
+    </div>
 
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">SKILLS</a>
-                    </li>
+  </div>
+</nav>
 
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">WORK</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">CONTACT</a>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-
-
-        <nav class="navbar">
-            <div class="container-fluid">
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class=""><img src="Assets/Images/Hum menu.png" alt="ham menu" class="img-fluid"></span>
-                </button>
-                
-                <!-- <ul>
-                    <img src="Assets/Images/logo-no-background.png" alt="" class="navbar-brand">
-                </ul> -->
-
-            </div>
-        </nav>
 
     <!-- End -->
 
@@ -64,19 +63,36 @@
         
         <section class="hero">
             <div class="container">
-                <h1> <span> < </span> Hello! <span> > </span> </h1>
+                <h1> <span> &lt; </span> Hello! <span> &gt; </span> </h1>
                 <div class="row">
-                    <div class="col-md-6 col-lg-12">
+                    <div class="col-md-6 col-lg-6">
                         <p>
                             I’m <i>Nyasha</i> a web developer, I'm here to make your life easier,
-                             one HTML tag at a time! Helping you create the perfect 
-                             website adventure! 
+                            one HTML tag at a time! Helping you create the perfect 
+                            website adventure! 
                         </p>
                     </div>
+
+                    <div class="col-lg-6">
+                        <div class="code-container">
+                            <div class="code dispay-5">
+                              <span class="tag">&lt;html&gt;</span><br>
+                              <span class="indent">&emsp;<span class="tag">&lt;head&gt;</span></span><br>
+                              <span class="indent">&emsp;&emsp;<span class="tag">&lt;title&gt;</span><span class="text-light">Welcome To</span><span class="tag">&lt;/title&gt;</span></span><br>
+                              <span class="indent">&emsp;<span class="tag">&lt;/head&gt;</span></span><br>
+                              <span class="indent">&emsp;<span class="tag">&lt;body&gt;</span></span><br>
+                              <span class="indent">&emsp;&emsp;<span class="tag">&lt;h1&gt;</span><span class="text-light">My Portfolio</span><span class="tag">&lt;/h1&gt;</span></span><br>
+                              <span class="indent">&emsp;<span class="tag">&lt;/body&gt;</span></span><br>
+                              <span class="tag">&lt;/html&gt;</span><br>
+                            </div>
+                          </div>
+                    </div>
+
                 </div>
                 <button type="button" class="btn">Download CV</button>
             </div>
         </section>
+
         
         <div class="Line">
             <span class="breaker"></span>
@@ -94,7 +110,7 @@
                 <div class="col-lg-6 col-md-6 FirstInnerAbout">
                     <div class="person">
                         <div class="container-outer">
-                            <div class="container-inner">
+                            <div class="container-inner pointer-social">
                                 <img class="circle" src="Assets/Images/Rectangle 23.png">
                                 <img class="img img2" src="Assets/Images/my pic.png">
                             </div>
@@ -121,22 +137,22 @@
 
                         <ul class="wrapper">
 
-                            <li class="icon twitter">
+                            <li class="icon twitter pointer-social">
                                 <span class="tooltip">Twitter</span>
                                 <span><i class="fab fa-twitter"></i></span>
                               </li>
 
-                            <li class="icon instagram">
-                              <span class="tooltip">Instagram</span>
-                              <span><i class="fab fa-instagram"></i></span>
+                            <li class="icon linkedin pointer-social">
+                              <span class="tooltip">Linkedin</span>
+                              <span><i class="fab fa-linkedin"></i></span>
                             </li>
 
-                            <li class="icon facebook">
+                            <li class="icon facebook pointer-social">
                                 <span class="tooltip">Facebook</span>
                                 <span><i class="fab fa-facebook-f"></i></span>
                             </li>
 
-                            <li class="icon github">
+                            <li class="icon github pointer-social">
                               <span class="tooltip">Github</span>
                               <span><i class="fab fa-github"></i></span>
                             </li>
@@ -292,9 +308,163 @@
 
         <section class="Work">
             <h4>MY WORKS</h4>
+            <div class="container innerWork">
+                <H5 class="text-start">My <span>Recent</span>Project</H5>
+                        
+                <div class="portfolio">
+                    <div class="filters ">
+                        <a href="#" data-filter=".all" class="pointer-href">
+                            All
+                        </a>
+                        <a href="#" data-filter=".Development" class="pointer-href">
+                            Web Dev
+                        </a>
+                        <a href="#" data-filter=".Design" class="pointer-href">
+                            Web Design
+                        </a>
+    
+                    </div>
+                    <div class="portfolio-container"> 
 
-            <button type="button" class="btn">View More</button>
+                        <div class="col-md-6 col-lg-4 Development all ">
+                            <div class="portfolio-item">
+                                <img src="Assets/Images/portfolio/2.png" class="img-fluid" alt="">
+                                <div class="content-holder">
+                                    
+                                    <div class="text-holder">
+                                        <h6 class="title">Food Lovers</h6>
+                                        <p class="subtitle"><a href="">Open Project</a></p>
+                                    </div>
+                                </div>   
+                            </div>             
+                        </div>
+                        <div class="col-md-6 col-lg-4 Development all">
+                            <div class="portfolio-item">
+                                <img src="Assets/Images/portfolio/1.png" class="img-fluid" alt="">
+                                <div class="content-holder">
+                                    
+                                    <div class="text-holder">
+                                        <h6 class="title">Food Lovers</h6>
+                                        <p class="subtitle"><a href="">Open Project</a></p>
+                                    </div>
+                                </div> 
+                            </div>                         
+                        </div>
+                        <div class="col-md-6 col-lg-4 Design all">
+                            <div class="portfolio-item">
+                                <img src="Assets/Images/portfolio/6.png" class="img-fluid" alt="">                         
+                                <div class="content-holder">
+                                    
+                                    <div class="text-holder">
+                                        <h6 class="title">Food Lovers</h6>
+                                        <p class="subtitle"><a href="">Open Project</a></p>
+                                    </div>
+                                </div>    
+                            </div>              
+                        </div> 
+                        <div class="col-md-6 col-lg-4 Development all">
+                            <div class="portfolio-item">
+                                <img src="Assets/Images/portfolio/1.png" class="img-fluid" alt="">
+                                <div class="content-holder">
+                                    
+                                    <div class="text-holder">
+                                        <h6 class="title">Food Lovers</h6>
+                                        <p class="subtitle"><a href="">Open Project</a></p>
+                                    </div>
+                                </div>
+                            </div>                                                     
+                        </div>
+    
+                        <div class="col-md-6 col-lg-4 Design all"> 
+                            <div class="portfolio-item">
+                                <img src="Assets/Images/portfolio/6.png" class="img-fluid" alt="">                               
+                                <div class="content-holder">
+                                    
+                                    <div class="text-holder">
+                                        <h6 class="title">Food Lovers</h6>
+                                        <p class="subtitle"><a href="">Open Project</a></p>
+                                    </div>
+                                </div>
+                            </div>                                                       
+                        </div> 
+                        <div class="col-md-6 col-lg-4 Development all">
+                            <div class="portfolio-item">
+                                <img src="Assets/Images/portfolio/1.png" class="img-fluid" alt="">  
+                               <div class="content-holder">
+                                   
+                                    <div class="text-holder">
+                                        <h6 class="title">Food Lovers</h6>
+                                        <p class="subtitle"><a href="">Open Project</a></p>
+                                    </div>
+                                </div>
+                            </div>                                                     
+                        </div>
+                        <div class="col-md-6 col-lg-4 Design all">
+                            <div class="portfolio-item">
+                                <img src="Assets/Images/portfolio/6.png" class="img-fluid" alt="">       
+                               <div class="content-holder">
+                                    
+                                    <div class="text-holder">
+                                        <h6 class="title">Food Lovers</h6>
+                                        <p class="subtitle"><a href="">Open Project</a></p>
+                                    </div>
+                                </div>
+                            </div>                                                       
+                        </div> 
+                        <div class="col-md-6 col-lg-4 Design all"> 
+                            <div class="portfolio-item">
+                                <img src="Assets/Images/portfolio/1.png" class="img-fluid" alt="">            
+                                <div class="content-holder">
+                                     
+                                    <div class="text-holder">
+                                        <h6 class="title">Food Lovers</h6>
+                                        <p class="subtitle"><a href="">Open Project</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                                    
+                        </div> 
 
+                        <div class="col-md-6 col-lg-4 Development all">
+                            <div class="portfolio-item">
+                                <img src="Assets/Images/portfolio/1.png" class="img-fluid" alt="">  
+                               <div class="content-holder">
+                                    
+                                    <div class="text-holder">
+                                        <h6 class="title">Food Lovers</h6>
+                                        <p class="subtitle"><a href="">Open Project</a></p>
+                                    </div>
+                                </div>
+                            </div>                                                     
+                        </div>
+                        <div class="col-md-6 col-lg-4 Design all">
+                            <div class="portfolio-item">
+                                <img src="Assets/Images/portfolio/6.png" class="img-fluid" alt="">       
+                               <div class="content-holder">
+                                    
+                                    <div class="text-holder">
+                                        <h6 class="title">Food Lovers</h6>
+                                        <p class="subtitle"><a href="">Open Project</a></p>
+                                    </div>
+                                </div>
+                            </div>                                                       
+                        </div> 
+                        <div class="col-md-6 col-lg-4 Design all">
+                            <div class="portfolio-item">
+                                <img src="Assets/Images/portfolio/6.png" class="img-fluid" alt="">       
+                               <div class="content-holder">
+                                    
+                                    <div class="text-holder">
+                                        <h6 class="title">Food Lovers</h6>
+                                        <p class="subtitle"><a href="">Open Project</a></p>
+                                    </div>
+                                </div>
+                            </div>                                                       
+                        </div> 
+
+                    </div> 
+                </div>  
+            </div>
         </section>
 
         <div class="fifthLine">
@@ -303,82 +473,96 @@
 
     <!-- End -->
 
+
+
+      
+
     <!-- Contact Me -->
         
-        <footer class="Contact">
-            <h4>CONTACT ME</h4>
-            <div class="container">
-                <div class="row">
+<footer class="Contact">
+    <h4>CONTACT ME</h4>
+    <div class="container">
+        <div class="row">
 
-                    <div class="col-lg-6 innerContact">
+            <div class="col-lg-6 innerContact">
 
-                        <div class="innerContactInput">
+                <div class="innerContactInput">
 
-                            <div class="form-floating mb-3">
-                                <input type="name" class="form-control" id="floatingInput" placeholder="Name">
-                                <label for="floatingInput">Name</label>
-                            </div>
-
-                            <div class="form-floating">
-                                <input type="email" class="form-control" id="floatingEmail" placeholder="Email">
-                                <label for="floatingEmail">Email</label>
-                            </div>
-                              
-                        </div>
-
-                        <div class="innerContactTextarea form-floating">
-                            <textarea class="form-control" id="floatingTextarea" placeholder="Message"></textarea>
-                            <label for="floatingTextarea">Message</label>
-                        </div>
-
-                        <button type="submit" class="btn mb-3">Send</button>
-
+                    <div class="form-floating mb-3">
+                        <input type="name" class="form-control" id="floatingInput" placeholder="Name">
+                        <label for="floatingInput">Name</label>
                     </div>
 
-                    <div class="col-lg-6 secondInnerContact ">
-
-                        <h3>Let's get in<i class="textColour"> touch!</i></h3>
-
-                        <div class="contactParagraph ">
-                            <p>Either by <span>email </span>or through my<span> social media</span>.</p>
-                        </div>
-
-                        <div class="socialIcons">
-
-                            <ul class="wrapper">
-    
-                                <li class="icon twitter">
-                                    <span class="tooltip">Twitter</span>
-                                    <span><i class="fab fa-twitter"></i></span>
-                                  </li>
-    
-                                <li class="icon instagram">
-                                  <span class="tooltip">Instagram</span>
-                                  <span><i class="fab fa-instagram"></i></span>
-                                </li>
-    
-                                <li class="icon facebook">
-                                    <span class="tooltip">Facebook</span>
-                                    <span><i class="fab fa-facebook-f"></i></span>
-                                </li>
-    
-                                <li class="icon github">
-                                  <span class="tooltip">Github</span>
-                                  <span><i class="fab fa-github"></i></span>
-                                </li>
-    
-                            </ul>
-    
-                        </div>
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="Email">
+                        <label for="floatingEmail">Email</label>
                     </div>
+                          
                 </div>
-            
+
+                <div class="innerContactTextarea form-floating">
+                    <textarea class="form-control" id="floatingTextarea" placeholder="Message"></textarea>
+                    <label for="floatingTextarea">Message</label>
+                </div>
+
+                <button type="submit" class="btn mb-3">Send</button>
+
             </div>
 
-            <div class="copyright">
-                <p>Copyright <span>&copy;</span> 2023 Portfolio by <span>Nyasha</span>. All Rights Reserved.</p>
+            <div class="col-lg-6 secondInnerContact ">
+
+                <h3>Let's get in<i class="textColour"> touch!</i></h3>
+
+                <div class="contactParagraph ">
+                    <p>Either by <span>email </span>or through my<span> social media</span>.</p>
+                </div>
+
+                <div class="socialIcons">
+
+                    <ul class="wrapper">
+
+                        <li class="icon twitter pointer-social">
+                            <a href="#">
+                                <span class="tooltip">Twitter</span>
+                                <span><i class="fab fa-twitter"></i></span>
+                            </a>
+                        </li>
+
+                        <li class="icon linkedin pointer-social">
+                            <a href="#">
+                                <span class="tooltip">Linkedin</span>
+                                <span><i class="fab fa-linkedin"></i></span>
+                            </a>
+                        </li>
+
+                        <li class="icon facebook pointer-social">
+                            <a href="#">
+                                <span class="tooltip">Facebook</span>
+                                <span><i class="fab fa-facebook-f"></i></span>
+                            </a>
+                        </li>
+
+                        <li class="icon github pointer-social">
+                            <a href="#">
+                                <span class="tooltip">Github</span>
+                                <span><i class="fab fa-github"></i></span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
             </div>
-        </footer>
+        </div>
+    
+    </div>
+
+    <div class="copyright">
+        <p>Copyright <span>&copy;</span> 2023 Portfolio by <span>Nyasha</span>.
+        All Rights Reserved.</p>
+    </div>
+</footer>
+
     <!-- End -->
 
 
@@ -391,6 +575,10 @@
         <script src="Scripts/Js/jquery-3.6.3.min.js"></script>
         <script src="Scripts/Js/scripts.js"></script>
         <script src="Scripts/Js/bootstrap.bundle.min.js"></script>
+        <script src="Scripts/Js/owl.carousel.min.js"></script>
+        <script src="Scripts/Js/isotope.pkgd.min.js"></script>
+        <script src="Scripts/Js/imagesloaded.pkgd.min.js"></script>
+
 </body>
 
 

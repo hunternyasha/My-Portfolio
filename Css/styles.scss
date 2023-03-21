@@ -1,53 +1,7 @@
 /********** Reset **********/ 
-@include reset-css;
-*, *:before, *:after{
-  box-sizing: border-box;
-}
 
-html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  text-size-adjust: none;
-}
-
-footer, header, nav, section, main{
-  display: block;
-}
-
-body{
-  line-height: 1;
-}
-
-ol, ul{
-  list-style: none;
-}
-
-blockquote, q{
-  quotes: none;
-}
-
-blockquote:before, blockquote:after, q:before, q:after{
-  content: '';
-  content: none;
-}
-
-table{
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-input{
-  border-radius: 0;
-}
-body{
-    background-color: rgba(36, 40, 48, 1);
-}
+@import url("./_reboot.scss");
+@import url("./_clearfix.scss");
 
 /********** End **********/ 
 
@@ -62,7 +16,92 @@ body{
 }
 /********** End **********/ 
 
+body{
+  background-size: 6px 6px !important;
+  background-image: linear-gradient(-45deg, #101010 46%, #060606 49%, #060606 51%, #101010 55%);
+  overflow-x: hidden;
+}
+
+/********** Custom Cursor **********/ 
+
+// * {
+//   cursor: none;
+//   outline: 1px solid transparent;
+// }
+// .pointer {
+//   position: fixed;
+//   top: 50%;
+//   left: -100px;
+//   -webkit-transform: translate(-50%, -50%);
+//           transform: translate(-50%, -50%);
+//   width: 10px;
+//   height: 10px;
+//   pointer-events: none;
+//   -webkit-box-sizing: border-box;
+//       box-sizing: border-box;
+//   z-index: 9999;
+//   -webkit-transition-property: width, height, background;
+//           transition-property: width, height, background;
+//   -webkit-transition-duration: .5s;
+//           transition-duration: .5s;
+//   -webkit-transition-timing-function: cubic-bezier(.2, .96, .34, 1);
+//           transition-timing-function: cubic-bezier(.2, .96, .34, 1);
+//   border-radius: 50%;
+//   background:rgba(255, 223, 15, 1);
+//   overflow: hidden;
+// }    
+body.out .pointer {
+  width: 0;
+  height: 0;
+}    
+
+.pointer.href {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  -webkit-box-shadow: 0 0 30px #FFDF0F;
+      box-shadow: 0 0 30px #FFDF0F;
+}
+.pointer.social {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  -webkit-box-shadow: 0 0 30px #000;
+      box-shadow: 0 0 30px #000;
+}
+
+
+
+
+/********** End **********/
+.code-container {
+  perspective: 2000px;
+
+}
+
+.code {
+  position: relative;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transform: rotateX(30deg);
+  transition: transform 0.5s;
+}
+
+.tag {
+  color: rgba(255, 223, 15, 1);
+}
+
+.indent {
+  margin-left: 20px;
+}
+
+.code:hover {
+  transform: rotateX(0deg);
+}
+
+
 /********** Nav **********/ 
+
 #navbarToggler{
     background-color: rgba(36, 40, 48, 1);
 }
@@ -72,59 +111,77 @@ body{
         a:hover{color:rgba(255, 223, 15, 1); }
     }
 }
-.navbar{
-    background-color: rgba(36, 40, 48, 1); 
-    box-shadow: 4px 4px 5px 0 rgb(0 0 0 / 80%); 
-    padding: 10px 0 0 0;
-    button{width: 60px;}
-    .navbar-toggler:focus {
-        text-decoration: none;
-        outline: 0;
-        box-shadow: 0 0 0 1px black ;
-    }
-    ul{margin: 0 10% 0 0;
-        img{font-size: 30px;}
-    }
+.navbar {
+  background: rgba(36, 40, 48, 1); 
+  box-shadow: 4px 4px 5px 0 rgba(0, 0, 0, 0.8); 
+  padding: 10px 0 0;
+  button { width: 60px; }
 }
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 1px black ;
+}
+
+ul {
+  margin-right: 10%;
+}
+
+img {
+  font-size: 30px;
+}
+img{color: rgb(0 0 0 / 80%);}
 /********** End **********/ 
 
 /********** Hero Section **********/ 
-.hero{
-    
-    .container{
-        margin: 0 0 0 13%;
+$yellow: rgba(255, 223, 15, 1);
+
+.hero {
+    .container {
+        margin-left: 13%;
     }
-    h1{
+
+    h1 {
         font-family: "IBMPlexMono-Light";
         font-size: 30px;
         color: white;
         margin: 14% 0 5% 0;
-        span{color: rgba(255, 223, 15, 1);}
+
+        span {
+            color: $yellow;
+        }
     }
-    p{
+
+    p {
         font-family: "IBMPlexMono-Regular";
         color: white;
         font-size: 20px;
-        width: 50%;
-        margin: 0 0 5% 0;
+        width: 80%;
+        margin-bottom: 5%;
         line-height: 1.5;
-        i{color: rgba(255, 223, 15, 1);}
-    }
-    button{
-        color: white;
-        border: 1px solid white;
-        padding: 1% 2% 1% 2%;
-        font-family: "IBMPlexMono-Light";
-    }
-     
-    button:hover{color: rgba(255, 223, 15, 1);}
-    button:focus{
-        text-decoration: none;
-        outline: 0;
-        box-shadow: 0 0 0 2px black ;
+
+        i {
+            color: rgba(255, 223, 15, 1);
+        }
     }
 
+    button {
+        color: white;
+        border: 1px solid white;
+        padding: 1% 2%;
+        font-family: "IBMPlexMono-Light";
+
+        &:hover,
+        &:focus {
+            color: $yellow;
+            text-decoration: none;
+            outline: 0;
+            box-shadow: 0 0 0 2px black;
+        }
+    }
 }
+
 .Line{
     .breaker{
         color: white;
@@ -157,61 +214,71 @@ body{
 
 
 /******* About profile pic & styles ********/
-.person{
-    text-align: -webkit-center;
+.person {
+  text-align: center; // combine vendor-prefixed property with CSS3 final specification
 }
-  .container-outer {
-    border-radius: 50%;
-    height: 312px;
-    -webkit-tap-highlight-color: transparent;
-    transform: scale(0.78);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    width: 400px;
-  }
-  .container-outer:after {
-    height: 10px;
-    position: absolute;
-    top: 390px;
-    width: 100%;
-  }
-  .container-outer:hover {
-    transform: scale(0.74);
-  }
-  .container-inner {
-    clip-path: path(
-      "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
-    );
-    position: relative;
-    transform-origin: 50%;
-    top: -200px;
-  }
-  .circle {
-    border-radius: 50%;
-    box-shadow: 0 5px 10px rgb(0 0 0 / 80%);
-    cursor: pointer;
-    height: 380px;
-    left: 10px;
-    pointer-events: none;
-    position: absolute;
-    top: 210px;
-    width: 380px;
-  }
-  .img {
-    pointer-events: none;
-    position: relative;
-    transform: translateY(60px) scale(1.18);
-    transform-origin: 50% bottom;
-    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .container-outer:hover .img {
-    transform: translateY(0) scale(1.2);
-  }
 
-  .img2 {
-    left: -42vh;
-    top: 101px;
-    width: 198%;
+.container-outer, // combine to share width property
+.container-outer:after {
+  border-radius: 50%;
+  height: 312px;
+  width: 400px;
+  transform: scale(0.78);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-tap-highlight-color: transparent; // add vendor-prefixed property
 }
+
+.container-outer:after {
+  height: 10px;
+  position: absolute;
+  top: 390px;
+}
+
+.container-outer:hover {
+  transform: scale(0.74);
+}
+
+.container-inner {
+  clip-path: path(
+    "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+  );
+  position: relative;
+  top: -200px;
+  transform-origin: 50%;
+}
+
+.img,
+.container-outer:hover .img { // combine to share transform properties
+  pointer-events: none;
+  position: relative;
+  transform-origin: bottom center;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(60px) scale(1.18);
+}
+
+.container-outer:hover .img {
+  transform: translateY(0) scale(1.2);
+}
+
+.circle {
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8); // use rgba instead of rgb
+  cursor: pointer;
+  height: 380px;
+  left: 10px;
+  pointer-events: none;
+  position: absolute;
+  top: 210px;
+  width: 380px;
+}
+
+.img2 {
+  left: -42vh;
+  top: 101px;
+  width: 198%; // not sure if this could be further optimized without context
+}
+
+
 /******* end ********/
 
 
@@ -309,10 +376,10 @@ body{
     color: #ffffff;
   }
   
-  .wrapper .instagram:hover,
-  .wrapper .instagram:hover .tooltip,
-  .wrapper .instagram:hover .tooltip::before {
-    background: #E4405F;
+  .wrapper .linkedin:hover,
+  .wrapper .linkedin:hover .tooltip,
+  .wrapper .linkedin:hover .tooltip::before {
+    background: #0077B5;
     color: #ffffff;
   }
   
@@ -443,19 +510,90 @@ h5{
 /******* WORK ********/
 .Work{
   text-align: center;
-  button{
-    color: white;
-    border: 1px solid white;
-    padding: 1% 2% 1% 2%;
-    font-family: "IBMPlexMono-Light";
-}
- 
-button:hover{color: rgba(255, 223, 15, 1);}
-button:focus{
-    text-decoration: none;
-    outline: 0;
-    box-shadow: 0 0 0 2px black ;
-}
+  .innerWork{
+    padding: 0 10%;
+    .portfolio .filters {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .portfolio .filters a {
+      display: block;
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      opacity: 0.7;
+      padding: 4px 10px;
+      text-decoration: none;
+      font-family: "IBMPlexMono-Light";
+      transition: 0.3s;
+      -webkit-transition: 0.3s;
+    }
+    .portfolio .filters a:first-child {
+      margin-left: 0;
+    }
+    .portfolio .filters a:last-child {
+      margin-right: 0;
+    }
+    .portfolio .filters a:hover {
+      opacity: 0.9;
+    }
+    .portfolio .filters a.active {
+      opacity: 1;
+      background: r;
+      color: #fff;
+    }
+    .portfolio .portfolio-container .portfolio-item {
+      position: relative;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 4px -4px;
+      overflow: hidden;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+              img{
+                width: 95%;
+              }
+              p{
+                a{
+                  color: #fff;
+                  text-decoration: none;
+                }
+              }
+    }
+    .portfolio .portfolio-container .portfolio-item .content-holder {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 95%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.5s;
+      -webkit-transition: 0.5s;
+    }
+    .portfolio .portfolio-container .portfolio-item .content-holder .title {
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .portfolio .portfolio-container .portfolio-item .content-holder .subtitle {
+      font-weight: 500;
+      opacity: 1;
+      color: #fff;
+    }
+    .portfolio .portfolio-container .portfolio-item:hover .content-holder {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
 }
 
 .fifthLine{
@@ -628,9 +766,9 @@ footer{
     color: #ffffff;
   }
   
-  .wrapper .instagram:hover,
-  .wrapper .instagram:hover .tooltip,
-  .wrapper .instagram:hover .tooltip::before {
+  .wrapper .linkedin:hover,
+  .wrapper .linkedin:hover .tooltip,
+  .wrapper .linkedin:hover .tooltip::before {
     background: #E4405F;
     color: #ffffff;
   }
@@ -733,10 +871,10 @@ footer{
     color: #ffffff;
   }
   
-  .wrapper .instagram:hover,
-  .wrapper .instagram:hover .tooltip,
-  .wrapper .instagram:hover .tooltip::before {
-    background: #E4405F;
+  .wrapper .linkedin:hover,
+  .wrapper .linkedin:hover .tooltip,
+  .wrapper .linkedin:hover .tooltip::before {
+    background: #0077B5;
     color: #ffffff;
   }
   
