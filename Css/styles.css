@@ -19,6 +19,29 @@ body {
 }
 
 /********** Custom Cursor **********/
+* {
+  cursor: none;
+  outline: 1px solid transparent;
+}
+
+.pointer {
+  position: fixed;
+  top: 50%;
+  left: -100px;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  pointer-events: none;
+  box-sizing: border-box;
+  z-index: 9999;
+  transition-property: width, height, background;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.2, 0.96, 0.34, 1);
+  border-radius: 50%;
+  background: rgb(255, 223, 15);
+  overflow: hidden;
+}
+
 body.out .pointer {
   width: 0;
   height: 0;

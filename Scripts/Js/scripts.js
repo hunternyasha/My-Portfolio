@@ -9,28 +9,28 @@
     var
         e = document.getElementById("pointer");
 
-    // $(document).mousemove(function (e) {
+    $(document).mousemove(function (e) {
 
-    //     $(".theme-bg-color")
+        $(".theme-bg-color")
   
-    //     $(".pointer-href")
-    //         .on("mouseenter", function () {
-    //             $('.pointer').addClass("href")
-    //         })
-    //         .on("mouseleave", function () {
-    //             $('.pointer').removeClass("href")
-    //         })
+        $(".pointer-href")
+            .on("mouseenter", function () {
+                $('.pointer').addClass("href")
+            })
+            .on("mouseleave", function () {
+                $('.pointer').removeClass("href")
+            })
 
-    //     $(".pointer-social")
-    //         .on("mouseenter", function () {
-    //             $('.pointer').addClass("social")
-    //         })
-    //         .on("mouseleave", function () {
-    //             $('.pointer').removeClass("social")
-    //         })
+        $(".pointer-social")
+            .on("mouseenter", function () {
+                $('.pointer').addClass("social")
+            })
+            .on("mouseleave", function () {
+                $('.pointer').removeClass("social")
+            })
   
   
-    // });
+    });
 
     $(window).on("load", function() {
         var t = $(".portfolio-container");
