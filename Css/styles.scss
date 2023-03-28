@@ -906,7 +906,116 @@ footer{
 }
 }
 
+/***** Media Q *****/ 
+@media (max-width: 575px){
+  *{
+    cursor: none;
+    margin: 0; 
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .navbar{
+    margin: 0;
+    padding: 13px 0;
+    button{
+      span{
+        img{
+          font-size: 30px;
+        }
+      }
+    }
+    #navbarToggler{
+      margin: 5% 0 0 2% ;
+      ul{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        li{
+          width: 100%;
+          a{
+            
+          }
+        }
+      }
+    }  
+  }
+  /******* Hero Section ********/
+  .hero{
+    text-align: center;
+    .container{
+        margin: 0;
+        padding: 0;
+      h1{
+        text-align: center;
+      }
+    }
+    .row{
+      .col-md-6{
+        
+        p{
+          width: 100%;
+          text-align: start;
+        }
+        .code-container{
+          display: none;
+        }
+      }
+      button{
+        text-align: center;
+      }
+    }
+  }
+  /******* About ********/
+  .About{
+    padding-bottom: 0;
+    .FirstInnerAbout{
+      .person{
+        .container-outer{
+          overflow: visible;
+          .container-inner{
+            
+          } 
+        }
+      }
+    }
+    .SecInnerAbout{
+      .ndInnerAbout{
+        width: 100%;
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  /******* Skills  ********/
   
+  .Skills{
+    margin: 0;
+    padding: 0;
+    .innerSkills{
+      .cards{
+        padding: 0;
+        margin: 0 0 0 40%;
+        width: 170%;
+        text-align: center;
+        .row{
+          text-align: center;
+        }
+      }
+    }
+    .secondCard-marg{
+      margin: 0;
+      .row{
+        display: flex;
+      }
+    }
+  }
+}
+
+
   
 
 

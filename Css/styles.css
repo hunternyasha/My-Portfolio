@@ -835,4 +835,87 @@ footer .copyright p {
 }
 footer .copyright p span {
   color: rgb(255, 223, 15);
+}
+
+/***** Media Q *****/
+@media (max-width: 575px) {
+  * {
+    cursor: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .navbar {
+    margin: 0;
+    padding: 13px 0;
+  }
+  .navbar button span img {
+    font-size: 30px;
+  }
+  .navbar #navbarToggler {
+    margin: 5% 0 0 2%;
+  }
+  .navbar #navbarToggler ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar #navbarToggler ul li {
+    width: 100%;
+  }
+  /******* Hero Section ********/
+  .hero {
+    text-align: center;
+  }
+  .hero .container {
+    margin: 0;
+    padding: 0;
+  }
+  .hero .container h1 {
+    text-align: center;
+  }
+  .hero .row .col-md-6 p {
+    width: 100%;
+    text-align: start;
+  }
+  .hero .row .col-md-6 .code-container {
+    display: none;
+  }
+  .hero .row button {
+    text-align: center;
+  }
+  /******* About ********/
+  .About {
+    padding-bottom: 0;
+  }
+  .About .FirstInnerAbout .person .container-outer {
+    overflow: visible;
+  }
+  .About .SecInnerAbout .ndInnerAbout {
+    width: 100%;
+  }
+  .About .SecInnerAbout .ndInnerAbout p {
+    font-size: 14px;
+  }
+  /******* Skills  ********/
+  .Skills {
+    margin: 0;
+    padding: 0;
+  }
+  .Skills .innerSkills .cards {
+    padding: 0;
+    margin: 0 0 0 40%;
+    width: 170%;
+    text-align: center;
+  }
+  .Skills .innerSkills .cards .row {
+    text-align: center;
+  }
+  .Skills .secondCard-marg {
+    margin: 0;
+  }
+  .Skills .secondCard-marg .row {
+    display: flex;
+  }
 }/*# sourceMappingURL=styles.css.map */
