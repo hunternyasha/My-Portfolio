@@ -767,6 +767,7 @@ footer .copyright p span {
   .hero {
     margin: 0;
     padding: 0;
+    text-align: center;
   }
   .hero .container {
     margin: 0;
@@ -777,5 +778,55 @@ footer .copyright p span {
   .hero .container .row p {
     width: 100%;
     font-size: 18px;
+    text-align: start;
   }
+  .hero .container .row .code-container {
+    text-align: start;
+  }
+  .Line .breaker {
+    color: white;
+    display: flex;
+    border: 2px solid white;
+    margin: 18% 27px;
+    border-radius: 6px;
+  }
+  /***** About *****/
+  .About .row {
+    margin: 0;
+    padding: 0;
+  }
+  .About .row .FirstInnerAbout .person {
+    margin: 30px 0 0 -66px;
+  }
+  .About .row .FirstInnerAbout h2 {
+    font-size: 20px;
+  }
+  .About .row .SecInnerAbout .ndInnerAbout {
+    width: 100%;
+  }
+  .About .row .SecInnerAbout .ndInnerAbout p {
+    font-size: 18px;
+  }
+  .About .row .socialIcons {
+    margin: 0 0 -27% 0;
+  }
+  .About .row .socialIcons .wrapper .icon {
+    padding: 0;
+  }
+  .secondLine .secondBreaker {
+    display: flex;
+    border: 2px solid white;
+    margin: 0 50px;
+    border-radius: 6px;
+  }
+  /***** End *****/
+  /***** Skills *****/
+  .skills ul .skills-card {
+    padding: 0;
+  }
+  /***** End *****/
+  /***** Work *****/
+  /***** End *****/
+  /***** Contact *****/
+  /***** End *****/
 }/*# sourceMappingURL=styles.css.map */

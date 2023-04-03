@@ -838,6 +838,7 @@ footer{
   .hero{
     margin: 0;
     padding: 0;
+    text-align: center;
     .container{
       margin: 0;
       h1{
@@ -847,9 +848,84 @@ footer{
         p{
           width: 100%;
           font-size: 18px;
+          text-align: start;
+        }
+        .code-container{
+          text-align: start;
         }
       }
     }
   }
+  .Line{
+    .breaker{
+      color: white;
+      display: flex;
+      border: 2px solid white;
+      margin: 18% 27px;
+      border-radius: 6px;
+    }   
+  }
 
-}
+  /***** About *****/
+
+  .About{
+    .row{
+      margin: 0;
+      padding: 0;
+      .FirstInnerAbout{
+        .person{
+          margin: 30px 0 0 -66px;
+        }
+        h2{
+          font-size: 20px;
+        }
+        }
+        .SecInnerAbout{
+          .ndInnerAbout{
+            width: 100%;
+            p{
+              font-size: 18px;
+            }
+          }
+        }
+        .socialIcons{
+          margin: 0 0 -27% 0;
+          .wrapper{
+            .icon{
+              padding: 0;
+            }
+          }
+        }
+      }
+
+    }
+    .secondLine{
+      .secondBreaker{
+        display: flex;
+        border: 2px solid white;
+        margin: 0 50px;
+        border-radius: 6px;
+      }
+    }
+  
+    /***** End *****/
+  
+    /***** Skills *****/
+    .skills{
+      ul{
+
+        .skills-card{
+          padding: 0;
+        }
+      }
+    }
+    /***** End *****/
+  
+    /***** Work *****/
+    /***** End *****/
+  
+    /***** Contact *****/
+    /***** End *****/
+  }
+
+
