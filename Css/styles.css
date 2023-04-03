@@ -12,10 +12,13 @@
   src: url(/Assets/Fonts/IBM_Plex_Mono/IBMPlexMono-Light.ttf);
 }
 /********** End **********/
-body {
+html, body {
+  overflow-x: hidden;
   background-size: 6px 6px !important;
   background-image: linear-gradient(-45deg, #101010 46%, #060606 49%, #060606 51%, #101010 55%);
-  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
 }
 
 /********** Custom Cursor **********/
@@ -377,98 +380,66 @@ img {
 }
 
 /******* end ********/
-/******* Skills & cards with hover txt ********/
-h4 {
+/******* Skills ********/
+.skills {
+  text-align: center;
+}
+.skills h4 {
   font-family: "IBMPlexMono-Bold";
   text-align: center;
   color: rgb(255, 223, 15);
   font-size: 30px;
   margin-top: 6%;
 }
-
-h5 {
+.skills h5 {
   color: white;
   text-align: center;
   font-family: "IBMPlexMono-Light";
   font-size: 20px;
   margin: 5% 0 5% 0;
 }
-h5 span {
+.skills h5 span {
   color: rgb(255, 223, 15);
 }
-
-.card-padd {
-  margin: 0 0 3% 7%;
-  padding: 0 10% 0 10%;
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  list-style: none;
 }
-
-.secondCard-marg {
-  margin: 0 0 3% 35.2%;
-}
-
-.cards .card,
-.card {
-  width: 100px;
-  height: 100px;
+.skills ul .skills-card {
   background-color: rgb(36, 40, 48);
-  overflow: hidden;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-  transform-origin: center top;
-  transform-style: preserve-3d;
-  transform: translateZ(0);
-  transition: 0.3s;
-}
-
-.cards .card h6,
-.card h6 {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  font-size: 16px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   text-align: center;
-  background: none;
+  transition: 250ms transform ease-in-out;
+  width: 9rem;
+}
+.skills ul .skills-card h6 {
+  padding-bottom: 1rem;
+  font-weight: 200;
   color: white;
-  transform: translateY(100%);
-  transition: 0.3s;
   font-family: "IBMPlexMono-Light";
-  margin-top: 78px;
+  opacity: 0;
 }
-
-.cards .card:hover,
-.card:hover,
-.cards .card:focus,
-.card:focus,
-.cards .card:active,
-.card:active {
-  box-shadow: 0 0 5px rgb(255, 223, 15);
-  transform: translateY(-3px) scale(1.05) rotateX(15deg);
+.skills ul .skills-card:hover {
+  transform: translateY(-15px);
 }
-
-.cards .card:hover h6,
-.card:hover h6,
-.cards .card:focus h6,
-.card:focus h6,
-.card:active h6,
-.card:active h6 {
-  transform: none;
+.skills ul .skills-card:hover h6 {
+  opacity: 1;
+  transition: 250ms transform ease-in-out;
 }
-
-.cards .card:hover:after,
-.card:hover:after,
-.cards .card:focus:after,
-.card:focus:after,
-.cards .card:active:after,
-.card:active:after {
-  transform: rotate(25deg);
-  top: -40%;
-  opacity: 0.15;
+.skills ul .skills-card:active {
+  transform: translateY(5px);
 }
-
-.thirdLine .thirdBreaker {
+.skills .thirdLine .thirdBreaker {
   display: flex;
   border: 1px solid rgb(255, 223, 15);
   border-radius: 6px;
-  margin: 0 500px 5% 500px;
+  margin: 5% 500px 5% 500px;
 }
 
 .fourthLine .fourthBreaker {
@@ -484,8 +455,25 @@ h5 span {
 .Work {
   text-align: center;
 }
+.Work h4 {
+  font-family: "IBMPlexMono-Bold";
+  text-align: center;
+  color: rgb(255, 223, 15);
+  font-size: 30px;
+  margin-top: 5%;
+}
 .Work .innerWork {
   padding: 0 10%;
+}
+.Work .innerWork h5 {
+  color: white;
+  text-align: center;
+  font-family: "IBMPlexMono-Light";
+  font-size: 16px;
+  margin: 5% 0 5% 0;
+}
+.Work .innerWork h5 span {
+  color: rgb(255, 223, 15);
 }
 .Work .innerWork .portfolio .filters {
   display: flex;
@@ -494,7 +482,7 @@ h5 span {
 .Work .innerWork .portfolio .filters a {
   display: block;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 500;
   opacity: 0.7;
   padding: 4px 10px;
@@ -511,6 +499,7 @@ h5 span {
 }
 .Work .innerWork .portfolio .filters a:hover {
   opacity: 0.9;
+  color: #FFDF0F;
 }
 .Work .innerWork .portfolio .filters a.active {
   opacity: 1;
@@ -575,6 +564,13 @@ h5 span {
 
 /******* end ********/
 /******* Contact Me ********/
+footer h4 {
+  font-family: "IBMPlexMono-Bold";
+  text-align: center;
+  color: rgb(255, 223, 15);
+  font-size: 30px;
+  margin-top: 5%;
+}
 footer .container {
   margin: 5% 0 0 11%;
 }
@@ -626,7 +622,7 @@ footer .secondInnerContact {
   margin: 7% 0 0 5%;
 }
 footer .secondInnerContact h3 {
-  margin: 0 0 5% 10%;
+  margin: 0 0 5% 0;
   font-family: "IBMPlexMono-Bold";
   font-size: 40px;
   color: white;
@@ -740,88 +736,6 @@ footer .contactParagraph p {
 footer .contactParagraph p span {
   color: rgb(255, 223, 15);
 }
-footer .socialIcons .wrapper {
-  display: inline-flex;
-  list-style: none;
-}
-footer .socialIcons .wrapper .icon {
-  position: relative;
-  background: rgb(36, 40, 48);
-  border-radius: 50%;
-  padding: 35px;
-  margin: 50px 58px 0px -32px;
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.8);
-  cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-footer .socialIcons .wrapper .tooltip {
-  position: absolute;
-  top: 0;
-  font-size: 14px;
-  background: #ffffff;
-  color: #ffffff;
-  padding: 5px 8px;
-  border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-footer .socialIcons .wrapper .tooltip::before {
-  position: absolute;
-  content: "";
-  height: 8px;
-  width: 8px;
-  background: #ffffff;
-  bottom: -3px;
-  left: 50%;
-  transform: translate(-50%) rotate(45deg);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-footer .socialIcons .wrapper .icon:hover .tooltip {
-  top: -45px;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-footer .socialIcons .wrapper .icon:hover span,
-footer .socialIcons .wrapper .icon:hover .tooltip {
-  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-}
-footer .socialIcons .wrapper .facebook:hover,
-footer .socialIcons .wrapper .facebook:hover .tooltip,
-footer .socialIcons .wrapper .facebook:hover .tooltip::before {
-  background: #1877F2;
-  color: #ffffff;
-}
-footer .socialIcons .wrapper .twitter:hover,
-footer .socialIcons .wrapper .twitter:hover .tooltip,
-footer .socialIcons .wrapper .twitter:hover .tooltip::before {
-  background: #1DA1F2;
-  color: #ffffff;
-}
-footer .socialIcons .wrapper .linkedin:hover,
-footer .socialIcons .wrapper .linkedin:hover .tooltip,
-footer .socialIcons .wrapper .linkedin:hover .tooltip::before {
-  background: #0077B5;
-  color: #ffffff;
-}
-footer .socialIcons .wrapper .github:hover,
-footer .socialIcons .wrapper .github:hover .tooltip,
-footer .socialIcons .wrapper .github:hover .tooltip::before {
-  background: #333333;
-  color: #ffffff;
-}
-footer .socialIcons .icon:hover {
-  box-shadow: 0 1px 6px rgb(255, 223, 15);
-}
 footer .copyright {
   color: white;
   font-family: "IBMPlexMono-Regular";
@@ -837,85 +751,31 @@ footer .copyright p span {
   color: rgb(255, 223, 15);
 }
 
-/***** Media Q *****/
-@media (max-width: 575px) {
-  * {
-    cursor: none;
+@media (max-width: 575.98px) {
+  body {
     margin: 0;
-    padding: 0;
-    overflow-x: hidden;
   }
-  .navbar {
-    margin: 0;
-    padding: 13px 0;
-  }
-  .navbar button span img {
-    font-size: 30px;
-  }
-  .navbar #navbarToggler {
-    margin: 5% 0 0 2%;
-  }
-  .navbar #navbarToggler ul {
+  nav #navbarToggler .navbar-nav {
     display: flex;
     flex-direction: column;
+  }
+  nav #navbarToggler .navbar-nav .nav-item a {
+    font-size: 15px;
+    margin: 0 0 0 7%;
+  }
+  /***** Hero Section *****/
+  .hero {
     margin: 0;
     padding: 0;
-  }
-  .navbar #navbarToggler ul li {
-    width: 100%;
-  }
-  /******* Hero Section ********/
-  .hero {
-    text-align: center;
   }
   .hero .container {
     margin: 0;
-    padding: 0;
   }
   .hero .container h1 {
-    text-align: center;
+    font-size: 15px;
   }
-  .hero .row .col-md-6 p {
+  .hero .container .row p {
     width: 100%;
-    text-align: start;
-  }
-  .hero .row .col-md-6 .code-container {
-    display: none;
-  }
-  .hero .row button {
-    text-align: center;
-  }
-  /******* About ********/
-  .About {
-    padding-bottom: 0;
-  }
-  .About .FirstInnerAbout .person .container-outer {
-    overflow: visible;
-  }
-  .About .SecInnerAbout .ndInnerAbout {
-    width: 100%;
-  }
-  .About .SecInnerAbout .ndInnerAbout p {
-    font-size: 14px;
-  }
-  /******* Skills  ********/
-  .Skills {
-    margin: 0;
-    padding: 0;
-  }
-  .Skills .innerSkills .cards {
-    padding: 0;
-    margin: 0 0 0 40%;
-    width: 170%;
-    text-align: center;
-  }
-  .Skills .innerSkills .cards .row {
-    text-align: center;
-  }
-  .Skills .secondCard-marg {
-    margin: 0;
-  }
-  .Skills .secondCard-marg .row {
-    display: flex;
+    font-size: 18px;
   }
 }/*# sourceMappingURL=styles.css.map */

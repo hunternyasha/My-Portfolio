@@ -16,12 +16,15 @@
 }
 /********** End **********/ 
 
-body{
+
+html,body{
+  overflow-x: hidden;  
   background-size: 6px 6px !important;
   background-image: linear-gradient(-45deg, #101010 46%, #060606 49%, #060606 51%, #101010 55%);
-  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
 }
-
 /********** Custom Cursor **********/ 
 
 * {
@@ -402,98 +405,73 @@ $yellow: rgba(255, 223, 15, 1);
 }
 /******* end ********/
 
-/******* Skills & cards with hover txt ********/
-h4{
-  font-family: "IBMPlexMono-Bold";
+/******* Skills ********/
+
+.skills{
   text-align: center;
-  color: rgba(255, 223, 15, 1);
-  font-size: 30px;
-  margin-top: 6%;
-}
-h5{
-  color: white;
-  text-align: center;
-  font-family: "IBMPlexMono-Light";
-  font-size: 20px;
-  margin: 5% 0 5% 0;
-  span{
+  h4{
+    font-family: "IBMPlexMono-Bold";
+    text-align: center;
     color: rgba(255, 223, 15, 1);
+    font-size: 30px;
+    margin-top: 6%;
   }
-
-}
-.card-padd{
-  margin: 0 0 3% 7%;
-  padding: 0 10% 0 10%;
-  
-}
-.secondCard-marg{
-  margin: 0 0 3% 35.2%;
-}
-
-.cards .card,
-.card {
-  width: 100px;
-  height: 100px;
-  background-color: rgba(36, 40, 48, 1);
-  overflow: hidden;
-  box-shadow: 0 0 5px rgba(0,0,0,0.8);
-  transform-origin: center top;
-  transform-style: preserve-3d;
-  transform: translateZ(0);
-  transition: 0.3s;
-}
-.cards .card h6,
-.card h6 {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  font-size: 16px;
-  text-align: center;
-  background: none;
-  color: white;
-  transform: translateY(100%);
-  transition: 0.3s;
-  font-family: "IBMPlexMono-Light";
-  margin-top: 78px;
-}
-
-.cards .card:hover,
-.card:hover,
-.cards .card:focus,
-.card:focus,
-.cards .card:active,
-.card:active {
-  box-shadow: 0 0 5px rgba(255, 223, 15, 1);
-  transform: translateY(-3px) scale(1.05) rotateX(15deg);
-}
-.cards .card:hover h6,
-.card:hover h6,
-.cards .card:focus h6,
-.card:focus h6,
-.card:active h6,
-.card:active h6 {
-  transform: none;
-}
-.cards .card:hover:after,
-.card:hover:after,
-.cards .card:focus:after,
-.card:focus:after,
-.cards .card:active:after,
-.card:active:after {
-  transform: rotate(25deg);
-  top: -40%;
-  opacity: 0.15;
-}
-
-.thirdLine{
-  .thirdBreaker{
+  h5{
+    color: white;
+    text-align: center;
+    font-family: "IBMPlexMono-Light";
+    font-size: 20px;
+    margin: 5% 0 5% 0;
+    span{
+      color: rgba(255, 223, 15, 1);
+    }
+  }
+  ul{
     display: flex;
-    
-    border: 1px solid rgba(255, 223, 15, 1);
-    border-radius: 6px;
-    margin: 0 500px 5% 500px ;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    list-style: none;
+    .skills-card{
+      background-color: rgb(36, 40, 48);
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: 250ms transform ease-in-out;
+      width: 9rem;
+      h6{
+        padding-bottom: 1rem;
+        font-weight: 200;
+        color: white;
+        font-family: "IBMPlexMono-Light";
+        opacity: 0;
+      }
+    }
+    .skills-card:hover{
+      transform: translateY(-15px);
+      h6{
+        opacity: 1;
+        transition: 250ms transform ease-in-out;
+      }
+    }
+
+    .skills-card:active {
+      transform: translateY(5px);
+    }
   }
+
+      .thirdLine{
+      .thirdBreaker{
+        display: flex;
+        border: 1px solid rgba(255, 223, 15, 1);
+        border-radius: 6px;
+        margin: 5% 500px 5% 500px ;
+      }
+    }
 }
+
 
 
 .fourthLine{
@@ -510,8 +488,25 @@ h5{
 /******* WORK ********/
 .Work{
   text-align: center;
+  h4{
+    font-family: "IBMPlexMono-Bold";
+    text-align: center;
+    color: rgba(255, 223, 15, 1);
+    font-size: 30px;
+    margin-top: 5%;
+  }
   .innerWork{
     padding: 0 10%;
+    h5{
+      color: white;
+      text-align: center;
+      font-family: "IBMPlexMono-Light";
+      font-size:16px;
+      margin: 5% 0 5% 0;
+      span{
+        color: rgba(255, 223, 15, 1);
+      }
+    }
     .portfolio .filters {
       display: flex;
       justify-content: flex-end;
@@ -519,7 +514,7 @@ h5{
     .portfolio .filters a {
       display: block;
       color: white;
-      font-size: 20px;
+      font-size: 15px;
       font-weight: 500;
       opacity: 0.7;
       padding: 4px 10px;
@@ -536,6 +531,7 @@ h5{
     }
     .portfolio .filters a:hover {
       opacity: 0.9;
+      color: #FFDF0F;
     }
     .portfolio .filters a.active {
       opacity: 1;
@@ -609,6 +605,14 @@ h5{
 /******* Contact Me ********/
 
 footer{
+    h4{
+    font-family: "IBMPlexMono-Bold";
+    text-align: center;
+    color: rgba(255, 223, 15, 1);
+    font-size: 30px;
+    margin-top: 5%;
+  }
+
 .container{
     margin: 5% 0 0 11%;
   }  
@@ -668,7 +672,7 @@ footer{
   .secondInnerContact{
     margin: 7% 0 0 5%;
     h3{
-      margin: 0 0 5% 10%;
+      margin: 0 0 5% 0;
       font-family: "IBMPlexMono-Bold";
       font-size: 40px;
       color: white;
@@ -795,99 +799,6 @@ footer{
     }
   }
 }
-.socialIcons{
-  .wrapper {
-    display: inline-flex;
-    list-style: none;
-  }
-  
-  .wrapper .icon {
-    position: relative;
-    background: rgba(36, 40, 48, 1);
-    border-radius: 50%;
-    padding: 35px;
-    margin: 50px 58px 0px -32px;
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 1px 6px rgb(0 0 0 / 80%);
-    cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .tooltip {
-    position: absolute;
-    top: 0;
-    font-size: 14px;
-    background: #ffffff;
-    color: #ffffff;
-    padding: 5px 8px;
-    border-radius: 5px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .tooltip::before {
-    position: absolute;
-    content: "";
-    height: 8px;
-    width: 8px;
-    background: #ffffff;
-    bottom: -3px;
-    left: 50%;
-    transform: translate(-50%) rotate(45deg);
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  
-  .wrapper .icon:hover .tooltip {
-    top: -45px;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  
-  .wrapper .icon:hover span,
-  .wrapper .icon:hover .tooltip {
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-  }
-  
-  .wrapper .facebook:hover,
-  .wrapper .facebook:hover .tooltip,
-  .wrapper .facebook:hover .tooltip::before {
-    background: #1877F2;
-    color: #ffffff;
-  }
-  
-  .wrapper .twitter:hover,
-  .wrapper .twitter:hover .tooltip,
-  .wrapper .twitter:hover .tooltip::before {
-    background: #1DA1F2;
-    color: #ffffff;
-  }
-  
-  .wrapper .linkedin:hover,
-  .wrapper .linkedin:hover .tooltip,
-  .wrapper .linkedin:hover .tooltip::before {
-    background: #0077B5;
-    color: #ffffff;
-  }
-  
-  .wrapper .github:hover,
-  .wrapper .github:hover .tooltip,
-  .wrapper .github:hover .tooltip::before {
-    background: #333333;
-    color: #ffffff;
-  }
-  
-  .icon:hover{box-shadow: 0 1px 6px rgba(255, 223, 15, 1);}
-
-}
 .copyright{
   color: white;
   font-family: "IBMPlexMono-Regular";
@@ -906,117 +817,39 @@ footer{
 }
 }
 
-/***** Media Q *****/ 
-@media (max-width: 575px){
-  *{
-    cursor: none;
-    margin: 0; 
-    padding: 0;
-    overflow-x: hidden;
-  }
 
-  .navbar{
-    margin: 0;
-    padding: 13px 0;
-    button{
-      span{
-        img{
-          font-size: 30px;
-        }
-      }
-    }
+@media (max-width: 575.98px) { 
+  body{margin: 0;}
+    nav{
     #navbarToggler{
-      margin: 5% 0 0 2% ;
-      ul{
+      .navbar-nav{
         display: flex;
         flex-direction: column;
-        margin: 0;
-        padding: 0;
-        li{
-          width: 100%;
+        .nav-item{
           a{
-            
+            font-size: 15px;
+            margin: 0 0 0 7%;
           }
         }
       }
-    }  
+    }
   }
-  /******* Hero Section ********/
+  /***** Hero Section *****/
   .hero{
-    text-align: center;
-    .container{
-        margin: 0;
-        padding: 0;
-      h1{
-        text-align: center;
-      }
-    }
-    .row{
-      .col-md-6{
-        
-        p{
-          width: 100%;
-          text-align: start;
-        }
-        .code-container{
-          display: none;
-        }
-      }
-      button{
-        text-align: center;
-      }
-    }
-  }
-  /******* About ********/
-  .About{
-    padding-bottom: 0;
-    .FirstInnerAbout{
-      .person{
-        .container-outer{
-          overflow: visible;
-          .container-inner{
-            
-          } 
-        }
-      }
-    }
-    .SecInnerAbout{
-      .ndInnerAbout{
-        width: 100%;
-        p{
-          font-size: 14px;
-        }
-      }
-    }
-  }
-
-  /******* Skills  ********/
-  
-  .Skills{
     margin: 0;
     padding: 0;
-    .innerSkills{
-      .cards{
-        padding: 0;
-        margin: 0 0 0 40%;
-        width: 170%;
-        text-align: center;
-        .row{
-          text-align: center;
+    .container{
+      margin: 0;
+      h1{
+        font-size: 15px;
+      }
+      .row{
+        p{
+          width: 100%;
+          font-size: 18px;
         }
       }
     }
-    .secondCard-marg{
-      margin: 0;
-      .row{
-        display: flex;
-      }
-    }
   }
+
 }
-
-
-  
-
-
-
