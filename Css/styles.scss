@@ -79,7 +79,7 @@ body.out .pointer {
 /********** End **********/
 .code-container {
   perspective: 2000px;
-
+  margin: -45px 0 0 0;
 }
 
 .code {
@@ -307,6 +307,12 @@ $yellow: rgba(255, 223, 15, 1);
 .wrapper {
     display: inline-flex;
     list-style: none;
+    span{
+      i{
+        font-size: 30px;
+        color: white;
+      }
+    }
   }
   
   .wrapper .icon {
@@ -323,7 +329,6 @@ $yellow: rgba(255, 223, 15, 1);
     align-items: center;
     flex-direction: column;
     box-shadow: 0 0 5px rgb(0 0 0 / 80%);
-    cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   
@@ -442,19 +447,13 @@ $yellow: rgba(255, 223, 15, 1);
       transition: 250ms transform ease-in-out;
       width: 9rem;
       h6{
-        padding-bottom: 1rem;
         font-weight: 200;
-        color: white;
+        color: #FFDF0F;
         font-family: "IBMPlexMono-Light";
-        opacity: 0;
       }
     }
     .skills-card:hover{
       transform: translateY(-15px);
-      h6{
-        opacity: 1;
-        transition: 250ms transform ease-in-out;
-      }
     }
 
     .skills-card:active {
@@ -471,8 +470,6 @@ $yellow: rgba(255, 223, 15, 1);
       }
     }
 }
-
-
 
 .fourthLine{
   .fourthBreaker{
@@ -698,6 +695,12 @@ footer{
   .wrapper {
     display: inline-flex;
     list-style: none;
+    span{
+      i{
+        font-size: 30px;
+        color: white;
+      }
+    }
   }
   
   .wrapper .icon {
@@ -852,6 +855,7 @@ footer{
         }
         .code-container{
           text-align: start;
+          margin: 0;
         }
       }
     }
@@ -874,7 +878,7 @@ footer{
       padding: 0;
       .FirstInnerAbout{
         .person{
-          margin: 30px 0 0 -66px;
+          margin: 30px 0 0 -20px;
         }
         h2{
           font-size: 20px;
@@ -890,11 +894,6 @@ footer{
         }
         .socialIcons{
           margin: 0 0 -27% 0;
-          .wrapper{
-            .icon{
-              padding: 0;
-            }
-          }
         }
       }
 
@@ -913,19 +912,182 @@ footer{
     /***** Skills *****/
     .skills{
       ul{
-
+        display: flex;
         .skills-card{
           padding: 0;
         }
+        
+      }
+      .thirdLine{
+        .thirdBreaker{
+          display: flex;
+          border: 3px solid rgba(255, 223, 15, 1);
+          border-radius: 6px;
+          margin: 10% 15%;
+        }
+      }
+    }
+
+  .fourthLine{
+    .fourthBreaker{
+      color: white;
+      display: flex;
+      border: 3px solid white;
+      margin: 10% 20%;
+      border-radius: 6px;
+    }
+  }
+    /***** End *****/
+  
+    /***** Work *****/
+    .Work{
+      h4{
+        margin: 6% 0;
+      }
+       .innerWork{
+          h5{
+            text-align: end;
+            font-size: 20px;
+          }
+          .portfolio{
+            margin: 0 0 0 0;
+            .filters{
+              a{
+                font-size: 22px;
+              }
+            }
+          }
+        }
+    }
+
+    .fifthLine{
+      .fifthBreaker{
+        color: white;
+        display: flex;
+        border: 3px solid white;
+        margin: 10% 30%;
+        border-radius: 6px;
       }
     }
     /***** End *****/
   
-    /***** Work *****/
-    /***** End *****/
-  
     /***** Contact *****/
+
+    footer{
+      h4{
+        margin: 10% 0;
+      }
+      .container{
+        margin: 0;
+        .row{
+          .innerContact{
+            width: 100%;
+            margin: 0;
+            .innerContactInput{
+              .form-floating{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
     /***** End *****/
+  }
+
+  @media (min-width: 768px){
+    nav{
+      #navbarToggler{
+        .navbar-nav{
+          .nav-item{
+            margin: 0 0 0 45px;
+            a{
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    .hero{
+      .container{
+        .row{
+          p{
+            width: 100%;
+          }
+          .code-container{
+            margin: -6% 0 0 0;
+          }
+        }
+
+      }
+    }
+    .About{
+      padding: 0;
+      .row{
+        .FirstInnerAbout{
+          .person{
+            .container-outer{
+              .container-inner{
+                position: relative;
+                .img2{
+                  position: absolute;
+                  left: -84%;
+                }
+              }
+            }
+          }
+        }
+        .SecInnerAbout{
+          .ndInnerAbout{
+            width: 100%;
+            p{
+              font-size: 17px;
+            }
+          }
+          .socialIcons{
+            margin: -30px 0 0 0;
+          }
+        }
+      }
+    }
+
+    .secondLine{
+      .secondBreaker{
+        color: white;
+        display: flex;
+        border: 3px solid white;
+        margin: 10% 30%;
+        border-radius: 6px;
+      }
+    }
+    .skills{
+      .thirdLine{
+        .thirdBreaker{
+          color: rgb(255, 223, 15);
+          display: flex;
+          border: 3px solid rgb(255, 223, 15);
+          margin: 10% 30%;
+          border-radius: 6px;
+        }
+      }
+    }
+    footer{
+      .container{
+        .row{
+          .innerContact{
+            margin: 0 0 0;
+            width: 37%;
+            .innerContactTextarea{
+              .form-control{
+                
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
 
