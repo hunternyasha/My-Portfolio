@@ -510,7 +510,6 @@ img {
   padding-right: 0;
   margin: 4px -4px;
   overflow: hidden;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .Work .innerWork .portfolio .portfolio-container .portfolio-item img {
